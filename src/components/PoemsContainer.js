@@ -1,7 +1,7 @@
 import React from "react";
 import Poem from "./Poem";
 
-function PoemsContainer({poems, removePoem, addToFavorites}) {
+function PoemsContainer({poems,addToFavorites}) {
   return (
     <div className="poems-container">
       {poems.map((poem) => {
@@ -9,7 +9,6 @@ function PoemsContainer({poems, removePoem, addToFavorites}) {
           <Poem 
             key={poem.id} 
             poem={poem} 
-            removePoem={removePoem} 
             addToFavorites={addToFavorites} 
           />
         )

@@ -20,9 +20,7 @@ function App() {
     setPoems([...poems, newPoem]);
   }
 
-  function removePoem(poemToRemove) {
-    setPoems(poems.filter(poem => poem.id !== poemToRemove.id))
-  }
+  
 
   function addToFavorites(favPoem) {
     setPoems(poems.map(poem => {
@@ -37,8 +35,7 @@ function App() {
     } else {
       return (
         <PoemsContainer 
-          poems={poemsToDisplay} 
-          removePoem={removePoem} 
+          poems={poemsToDisplay}
           addToFavorites={addToFavorites}
         />
       )
